@@ -25,7 +25,8 @@ stored.
 ### PROGRAM:
 
 CLIENT:
-```import socket
+```
+import socket
 s=socket.socket()
 s.bind(('localhost',8000))
 s.listen(5)
@@ -37,10 +38,11 @@ while True:
         c.send(address[ip].encode())
     except KeyError:
         c.send("Not Found".encode())
-  ```
-  SERVER:
-  ```
-  import socket
+```
+
+SERVER:
+```
+import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
